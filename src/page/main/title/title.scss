@@ -1,0 +1,38 @@
+.title {
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        position: relative;
+        text-align: center; /* Выравнивание текста по центру */
+    }
+
+    &__background {
+        position: absolute;
+        z-index: -1;
+        color: white;
+
+        top: -50px;
+        left: 50px;
+        
+        font-size: 200px;
+        font-weight: 700;
+        opacity: 0.25;
+
+        user-select: none;
+    }
+
+    &__text {
+        color: white;
+        font-size: 100px;
+        letter-spacing: 15px;
+        font-weight: 500;
+
+        cursor: pointer;
+
+        user-select: none;
+    }
+}

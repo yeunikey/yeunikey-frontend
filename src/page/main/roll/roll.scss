@@ -1,0 +1,29 @@
+.roll {
+    position: absolute;
+    z-index: -5;
+
+    top: -325px;
+    left: 0px;
+
+    animation-name: animate;
+    animation-duration: 60s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+
+    & svg {
+        width: 1500px;
+        height: auto;
+    }
+}
+
+@keyframes animate {
+    0% {
+        rotate: 0deg;
+    }
+    25% {
+        left: -50px;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
