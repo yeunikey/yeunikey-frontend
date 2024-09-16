@@ -1,0 +1,89 @@
+.projects__title {
+
+    &__content {
+        display: flex;
+        align-items: center;
+    }
+
+    &__text {
+        color: #e8e8e8;
+        font-size: 35px;
+        font-weight: 600;
+        letter-spacing: 5px;
+
+        & span {
+            color: #999;
+        }
+    }
+
+    &__badges {
+        display: flex;
+        margin: -5px;
+        margin-left: 50px;
+    }
+
+    &__badge {
+        margin: 5px;
+
+        background-color: rgb(50, 50, 50, 0.7);
+        cursor: pointer;
+        
+        padding: 10px 20px;
+        border-radius: 25px;
+
+        display: flex;
+        align-items: center;
+
+        &__selected {
+            background-color: rgba(255, 255, 255, 0.20) !important;
+        }
+        
+        &__icon {
+            display: flex;
+            align-items: center;
+            & svg {
+                width: 32px;
+                height: 32px;
+                fill: #777;
+
+                transition: 0.3s ease-in-out;
+            }
+        }
+
+        &__selected.react svg {
+            fill: #53C1DE !important;
+        }
+
+        &__selected.java svg {
+            fill: #f77e14 !important;
+        }
+
+        &__selected.typescript svg {
+            fill: #438ce6 !important;
+        }
+
+        &__selected.spring svg {
+            fill: #64c916 !important;
+        }
+
+        &__selected.bukkit svg {
+            fill: #03690c !important;
+        }
+
+        &:hover &__icon svg, & {
+            fill: #999
+        }
+
+        &__name {
+            margin-left: 10px;
+            color: #777;
+            font-size: 20px;
+            transition: 0.3s ease-in-out;
+        }
+        
+        &__selected &__name, &:hover &__name {
+            color: #999;
+        }
+    }
+
+}

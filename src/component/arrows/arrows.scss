@@ -1,0 +1,47 @@
+.arrows {
+    position: absolute;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    right: 25px;
+    top: 0;
+
+    z-index: 10;
+
+    &__content {
+        display: grid;
+        grid-gap: 15px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    &__item {
+    
+        &__blocked svg {
+            cursor: default !important;
+            background-color: rgba(255, 255, 255, 0.03) !important;
+            fill: #888;
+
+            &:hover {
+                fill: #888 !important;
+            }
+        }
+
+        & svg {
+            background-color: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            
+            padding: 10px;
+            border-radius: 10px;
+
+            width: 24px;
+            height: 24px;
+            fill: #999;
+
+            transition: 0.3s ease-in-out;
+
+            &:hover {
+                fill: #fff
+            }
+        }
+    }
+}

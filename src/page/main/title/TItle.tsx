@@ -1,50 +1,36 @@
 
 import { useEffect, useRef, useState } from 'react';
-import Player from '../player/Player';
 import './title.scss';
 import { motion } from 'framer-motion';
 
 function Title() {
 
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    let [isPlaying, setPlaying] = useState(false)
-
     return (
-        <div className="title">
-            <motion.div className="title__content"
+        <div className="main__title">
+            <motion.div className="main__title__content"
                 initial={{
-                    transform: "scale(0)"
+                    scale: 0,
+                    opacity: 0
                 }}
                 animate={{
-                    transform: "scale(1)"
+                    scale: 1,
+                    opacity: 1
                 }}
                 whileTap={{
-                    transform: "scale(0.9)"
+                    scale: 0.9
                 }}
-                onTap={() => {
-                    if (audioRef.current == null)
-                        return;
-
-                    if (isPlaying) {
-                        audioRef.current.pause()
-                        setPlaying(false)
-                    } else {
-                        audioRef.current.pause()
-                        setPlaying(false)
-                    }
+                whileHover={{
+                    scale: 1.05
                 }}
             >
-                <div className="title__background">
+                <div className="main__title__background">
                     YE
                 </div>
-                <div className="title__text">
+                <div className="main__title__text">
                     unikey
                 </div>
 
             </motion.div>
-            <audio ref={audioRef} loop autoPlay>
-                <source src="/music.mp3" type="audio/mpeg" />
-            </audio>
         </div>
     );
 }

@@ -4,9 +4,9 @@ import './roll.scss';
 
 function Roll() {
     return (
-        <motion.div className="roll"
+        <motion.div className="roll-1"
             initial={{
-                rotate: 360,
+                rotate: 360, 
                 scale: 0
             }}
             animate={{

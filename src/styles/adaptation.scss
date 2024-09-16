@@ -1,45 +1,202 @@
 @media (min-width: 300px) and (max-width: 500px) {
-    .title__text {
+    .main__title__text {
         font-size: 60px !important;
     }
-    .title__background {
+    .main__title__background {
         font-size: 120px !important;
         top: -30px !important;
         left: 50px !important;
     }
-    .roll {
+    .roll-1 {
         top: -100px !important;
-        left: -300px !important;
+        left: -400px !important;
     }
-    .roll svg {
-        width: 1000px !important;
+    .roll-1 svg {
+        width: 150vh !important;
+    }
+
+    .portfolio__projects {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .portfolio__project {
+        height: 200px !important;
+    }
+
+    .portfolio__project__title {
+        font-size: 25px !important;
+    }
+
+    .portfolio__project__subtitle {
+        font-size: 20px !important;
+        width: 100% !important;
+    }
+
+    .portfolio__project__image {
+        display: none !important;
+    }
+
+    .projects__title__content {
+        display: block !important;
+    }
+
+    .projects__title__text {
+        display: flex;
+
+        & span {
+            margin-left: 15px;
+        }
+    }
+    .projects__title__badges {
+        margin: 0 !important;
+        margin-top: 15px !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 5px;
+    }
+
+    .projects__title__badge {
+        margin: 0 !important;
+        padding: 5px 10px !important;
+    }
+
+    .projects__title__badge__icon svg {
+        width: 25px !important;
+    }
+
+    .projects__title__badge__name {
+        font-size: 15px !important;
+        margin-left: 5px !important;
     }
 }
 
-@media (min-width: 500px) and (max-width: 700px) {
-    .title__text {
+@media (min-width: 500px) and (max-width: 800px) {
+    .main__title__text {
         font-size: 60px !important;
     }
-    .title__background {
+    .main__title__background {
         font-size: 120px !important;
         top: -30px !important;
         left: 50px !important;
     }
-    .roll {
+    .roll-1 {
+        top: -100px !important;
+        left: -400px !important;
+    }
+    .roll-1 svg {
+        width: 150vh !important;
+    }
+    .portfolio__projects {
+        grid-template-columns: repeat(1, 1fr) !important;
+    }
+
+    .portfolio__project {
+        height: 200px !important;
+    }
+
+    .portfolio__project__title {
+        font-size: 30px !important;
+    }
+
+    .portfolio__project__subtitle {
+        font-size: 25px !important;
+        width: 100% !important;
+    }
+
+    .portfolio__project__image {
+        display: none !important;
+    }
+
+    .projects__title__content {
+        display: block !important;
+    }
+
+    .projects__title__text {
+        display: flex;
+
+        & span {
+            margin-left: 15px;
+        }
+    }
+
+    .projects__title__badges {
+        margin: 0 !important;
+        margin-top: 15px !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+    }
+
+    .projects__title__badge {
+        margin: 0 !important;
+        padding: 5px 10px !important;
+    }
+
+    .projects__title__badge__icon svg {
+        width: 25px !important;
+    }
+
+    .projects__title__badge__name {
+        font-size: 15px !important;
+        margin-left: 5px !important;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .roll-1 {
         top: -100px !important;
         left: -200px !important;
     }
-    .roll svg {
-        width: 1000px !important;
+    .roll-1 svg {
+        width: 150vh !important;
     }
-}
 
-@media (min-width: 700px) and (max-width: 1000px) {
-    .roll {
-        top: -300px !important;
-        left: -400px !important;
+    .portfolio__project {
+        height: 225px !important;
     }
-    .roll svg {
-        width: 1500px !important;
+
+    .portfolio__project__image {
+        height: 200px !important;
+        right: -50% !important;
+        bottom: -25% !important;
+    }
+    .portfolio__project:hover .portfolio__project__image {
+        right: -40% !important;
+        bottom: -15% !important;
+    }
+
+    // test
+    .projects__title__content {
+        display: block !important;
+    }
+
+    .projects__title__text {
+        display: flex;
+
+        & span {
+            margin-left: 15px;
+        }
+    }
+
+    .projects__title__badges {
+        margin: 0 !important;
+        margin-top: 15px !important;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 5px;
+    }
+
+    .projects__title__badge {
+        margin: 0 !important;
+        padding: 10px 15px !important;
+    }
+
+    .projects__title__badge__icon svg {
+        width: 30px !important;
+    }
+
+    .projects__title__badge__name {
+        font-size: 18px !important;
+        margin-left: 5px !important;
     }
 }
