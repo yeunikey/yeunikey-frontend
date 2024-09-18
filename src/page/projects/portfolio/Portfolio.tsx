@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react';
 import './portfolio.scss';
 import { IBadge, IProject } from '../../../entities';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 function Portfolio(props: {badges: IBadge[], selectedBadges: IBadge[], getSelectedBadge: Function}) {
 
@@ -64,15 +64,17 @@ function Portfolio(props: {badges: IBadge[], selectedBadges: IBadge[], getSelect
                     staggerChildren: 1
                 }}
             >
-                {!isEmpty 
-                ? 
-                projects.filter(b => isSelected(b)).map((project: IProject, key) => {
-                    return <Project key={key} project={project} badges={props.badges}></Project>
-                })
-                : 
-                projects.map((project: IProject, key) => {
-                    return <Project key={key} project={project} badges={props.badges}></Project>
-                })}
+                <AnimatePresence>
+                    {!isEmpty 
+                    ? 
+                    projects.filter(b => isSelected(b)).map((project: IProject, key) => {
+                        return <Project key={key} project={project} badges={props.badges}></Project>
+                    })
+                    : 
+                    projects.map((project: IProject, key) => {
+                        return <Project key={key} project={project} badges={props.badges}></Project>
+                    })}
+                </AnimatePresence>
             </motion.div>
         </div>
     );
@@ -81,6 +83,10 @@ function Portfolio(props: {badges: IBadge[], selectedBadges: IBadge[], getSelect
 function Project(props: { project: IProject, badges: IBadge[]}) {
     return (
         <motion.div className="portfolio__project"
+            key={props.project.key}
+            exit={{
+                scale: 0
+            }}
             initial={{
                 scale: 0,
                 opacity: 0
